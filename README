@@ -1,0 +1,62 @@
+jonathan.zl
+
+Question 1:
+
+Clever‫:‬
+His method is every time trying to fill the next free cell.
+That strategy makes him fill rows often as long as no one blocks him.
+
+Genius:
+knowing how the CleverPlayer behaves, the Genius start by blocking the 
+clever streak by placing a cell in cell (0,1) if available.
+ And than filling that column downward.
+The idea is that if them both have the same amount of steps 
+to fill a streak, the Genius one
+will always finish before the Clever since the c
+lever will never block the Clever on time
+before Genius finish, meanwhile
+ the Genius will always block the Clever.
+
+whatever:
+Just choosing legal place to put a mark.
+since he isn't trying to fill a pattern, his chances to succeed are odd.
+
+Question 2:
+The advantages of designing the software in a way that each of the player classes
+ implements a common interface are:
+
+The main advantage is that, given a player, we can perform various actions
+ on it without knowing what type of player it is!
+ For example, in the "Tournament" class, we could simply take input of two players
+ and implement a game for them without concerning ourselves with who those players are.
+ The code in the "Tournament" class is much clearer thanks to this design,
+ making it simpler and easier to debug.
+ The central principle of this design pattern is "polymorphism".
+ We created a common interface called "Player" that hides the multitude of player options.
+ The various options we created (the four from the exercise) can now be extended without
+ changing anything except adding a few lines to the "PlayerBuilder".
+ Again, this is excellent because the implementation will be much smoother,
+ and debugging will focus only on the new player class.
+
+Another principle reflected in this design is "encapsulation" – 
+we do not need to know or care how each player is implemented.
+ All that interests us is that they have a consistent API,
+ matching the "Player" interface. Thanks to the comments in this interface,
+ we can easily use the functions of a player without knowing how to implement them.
+ This greatly simplifies the use of different players in the code – we are only 
+interested in the fact that they ״can take turns״.
+ Thus, changes in one of the player classes will not require changes in any other class.
+
+Additionally, gathering all the different players under a common interface – "Player"
+ – also adheres to the principle of modularity.
+ Despite each player "performing a turn" differently,
+ we encapsulated this action into a clear, 
+specific, and simple feature that is common to all these different actions.
+
+The design is based on the following principles:
+
+1. Polymorphism
+2. Encapsulation
+3. Modularity
+
+

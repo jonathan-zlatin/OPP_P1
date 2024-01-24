@@ -38,6 +38,7 @@ public class ConsoleRenderer implements Renderer {
                     "         "}
     );
 
+
     private final char[][] buffer;// = new char[BUFFER_ROWS][BUFFER_COLS];
 
     /**
